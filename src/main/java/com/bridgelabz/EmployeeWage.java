@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /*
  * @author: Nikhil Deshmukh
- * Calculate Wages till a condition of total working hours or days is reached for a month
+ * Refactor the Code to write a Class Method to Compute Employee Wage - Use Class Method and Class Variables
  * - Assume wage per Hour is 20, - Assume Full Day Hour is 8
  * - Assume Part time Hour is 4, - Assume 100 hours and 20 Working Day per Month
  */
@@ -13,9 +13,7 @@ public class EmployeeWage {
     static final int NUM_OF_WORKING_DAYS = 20;
     static final int MAX_HRS_IN_MONTH = 100;
 
-    // Main method
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wage Computation Program");
+    public static int computeEmpWage() {
         // Local variables
         int empHrs = 0;
         int empWage = 0;
@@ -49,5 +47,12 @@ public class EmployeeWage {
         }
         totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
         System.out.println("Total Employee Wage for a Month: " + totalEmpWage);
+        return totalEmpWage;
+    }
+
+    // Main Method
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage Computation Program");
+        computeEmpWage();
     }
 }
